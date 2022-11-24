@@ -1,0 +1,30 @@
+/* Colors */
+$color-white: #fff;
+$color-black: #000;
+$color-neutral: #8a8a8a;
+$color-neutral-2: #d0d0d0;
+$color-neutral-3: #eee;
+$color-purple: #7126b5;
+$color-light-purple: #a06ece;
+$color-semi-purple: #e2d4f0;
+$color-red: #fa2c5a;
+$color-yellow: #f9cc00;
+$color-green: #73ca5c;
+
+/* Breakpoint */
+$breakpoint-sm: 425px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+
+/* Max-Width */
+$max-width-sm: 600px;
+$max-width-md: 968px;
+$max-width-lg: 1168px;
+
+/* Z-Index  */
+$z-index-negative: -1;
+$z-index-default: 0;
+$z-index-positive: 1;
+$z-index-front: 100;
+$z-index-overflow: 1000;

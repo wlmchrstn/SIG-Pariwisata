@@ -1,0 +1,106 @@
+/* stylelint-disable */
+$size--mobile: 425px;
+$size--max-mobile: 767px;
+$size--tablet: 768px;
+$size--max-tablet: 1023px;
+$size--desktop: 1024px;
+$size--max-desktop: 1439px;
+$size--large-desktop: 1440px;
+
+@mixin _mq($media-queries) {
+    $query-list: ();
+    $keys: map-keys($media-queries);
+    $values: map-values($media-queries);
+
+    @for $i from 1 through length($keys) {
+        $string: '(' + nth($keys, $i) + ':' + nth($values, $i) + ')';
+
+        @if (length($query-list) != 0) {
+            $string: 'and ' + $string;
+        }
+        $query-list: append($query-list, unquote($string));
+    }
+
+    @media #{$query-list} {
+        @content;
+    }
+}
+
+// Viewport Sizes
+@mixin mobile() {
+    @include _mq(
+        (
+            max-width: (
+                $size--mobile,
+            ),
+        )
+    ) {
+        @content;
+    }
+}
+
+@mixin only-mobile() {
+    @include _mq(
+        (
+            min-width: (
+                $size--mobile,
+            ),
+            max-width: (
+                $size--max-mobile,
+            ),
+        )
+    ) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @include _mq(
+        (
+            min-width: (
+                $size--tablet,
+            ),
+        )
+    ) {
+        @content;
+    }
+}
+
+@mixin only-tablet() {
+    @include _mq(
+        (
+            min-width: (
+                $size--tablet,
+            ),
+            max-width: (
+                $size--max-tablet,
+            ),
+        )
+    ) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @include _mq(
+        (
+            min-width: (
+                $size--desktop,
+            ),
+        )
+    ) {
+        @content;
+    }
+}
+
+@mixin largeDesktop() {
+    @include _mq(
+        (
+            min-width: (
+                $size--large-desktop,
+            ),
+        )
+    ) {
+        @content;
+    }
+}
