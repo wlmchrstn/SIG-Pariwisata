@@ -1,5 +1,5 @@
 /* stylelint-disable */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
 html,
 body,
@@ -95,13 +95,14 @@ html {
 }
 
 body {
-    font-family: 'Poppins';
+    font-family: 'Bree Serif', serif;
     font-size: 16px;
     overflow-x: hidden;
     line-height: 1.5;
 }
 
 * {
+    box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

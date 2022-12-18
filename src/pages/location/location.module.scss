@@ -1,0 +1,129 @@
+@use '../../styles/' as *;
+
+.root {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: $max-width-sm;
+    padding: 24px;
+
+    @include tablet() {
+        max-width: $max-width-md;
+        padding: 40px 24px;
+    }
+
+    @include desktop() {
+        max-width: $max-width-lg;
+    }
+}
+
+.subtitle {
+    font-size: 16px;
+    text-align: center;
+}
+
+.title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.desc {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.button {
+    font-family: 'Bree Serif', serif;
+    padding: 12px 24px;
+    background-color: #ffb13d;
+    color: $color-white;
+    border-radius: 8px;
+    border: none;
+    max-width: 120px;
+}
+
+.next {
+    margin-left: auto;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 22px 32px 32px;
+    background-color: rgba(217, 217, 217, 0.5);
+    border-radius: 23px;
+    cursor: pointer;
+
+    &-paragraph {
+        font-size: 16px;
+
+    }
+
+    &-checkbox {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.selected {
+    background-color: #9ee8c4;
+}
+
+.item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.destination-item {
+    background-color: #a3f6f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    width: 100%;
+    border-radius: 23px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.destination-label {
+    font-size: 16px;
+}
+
+.destination-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.sortable > div:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.map {
+    height: 700px;
+}
+
+.sidebar {
+    background-color: rgba(35, 55, 75, 0.9);
+    color: #fff;
+    padding: 6px 12px;
+    font-family: monospace;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 12px;
+    border-radius: 4px;
+}

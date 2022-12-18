@@ -1,0 +1,83 @@
+@use '../../styles/' as *;
+@import url('https://fonts.googleapis.com/css2?family=Brygada+1918&display=swap');
+
+.root {
+    box-sizing: border-box;
+    margin: 24px;
+    min-height: calc(100vh - 48px);
+    border: 1px solid $color-black;
+}
+
+.body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 252px;
+    max-width: $max-width-sm;
+    padding: 16px;
+    margin: 0 auto;
+    height: 1000px;
+    max-height: 800px;
+    justify-content: center;
+
+    @include tablet() {
+        max-width: $max-width-md;
+        padding: 40px 24px;
+    }
+
+    @include desktop() {
+        max-width: $max-width-lg;
+    }
+}
+
+.heading {
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.step {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    text-align: end;
+    margin-top: 24px;
+}
+
+.step-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 265px;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.step-item {
+    &-title {
+        font-size: 16px;
+    }
+
+    &-desc {
+        font-family: 'Brygada 1918', serif;
+        font-size: 14px;
+    }
+}
+
+.button {
+    font-family: 'Bree Serif', serif;
+    padding: 12px;
+    background-color: #ffb13d;
+    color: $color-white;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+
+    &-label {
+        margin-bottom: 12px;
+        margin-top: 24px;
+    }
+}
